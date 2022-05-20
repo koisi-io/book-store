@@ -1,7 +1,7 @@
 // Copyright (c) 2020 by Chrono
 
-#ifndef _ZMQ_HPP
-#define _ZMQ_HPP
+#ifndef _IZMQ_HPP
+#define _IZMQ_HPP
 
 #include "cpplang.hpp"
 

@@ -6,9 +6,9 @@
 
 //#include <iostream>
 
-#include "../core/cpplang.hpp"
-#include "../core/SalesData.hpp"
-#include "../core/Zmq.hpp"
+#include "cpplang.hpp"
+#include "SalesData.hpp"
+#include "izmp.hpp"
 
 // you should put json.hpp in ../common
 #include "json.hpp"

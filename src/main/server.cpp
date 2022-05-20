@@ -6,15 +6,14 @@
 
 //#include <iostream>
 
-#include "../core/cpplang.hpp"
-#include "../core/Summary.hpp"
-#include "../core/Zmq.hpp"
-#include "../core/Config.hpp"
+#include "cpplang.hpp"
+#include "Summary.hpp"
+#include "izmp.hpp"
+#include "Config.hpp"
 
 // you should put json.hpp in ../common
 #include "json.hpp"
 
-#include <cstdio>
 #include <cpr/cpr.h>
 
 USING_NAMESPACE(std);
