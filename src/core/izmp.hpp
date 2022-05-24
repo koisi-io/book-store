@@ -31,21 +31,17 @@ class ZmqContext final {
   public:
     // 工厂方法: 创建收发用的 sock 对象
     static zmq_socket_type recv_sock(int hwm = 1000, int linger = 10){
-        zmq_socket_type sock(context(), ZMQ_PULL);
-
-        sock.setsockopt(ZMQ_RCVHWM, hwm);
-        sock.setsockopt(ZMQ_LINGER, linger);    // wait for 10ms
-
-        return sock;
+      zmq_socket_type sock(context(), ZMQ_PULL);
+      sock.set(zmq::sockopt::rcvhwm, linger);
+      sock.set(zmq::sockopt::linger, linger);    // wait for 10ms
+      return sock;
     }
 
     static zmq_socket_type send_sock(int hwm = 1000, int linger = 10){
-        zmq_socket_type sock(context(), ZMQ_PUSH);
-
-        sock.setsockopt(ZMQ_SNDHWM, hwm);
-        sock.setsockopt(ZMQ_LINGER, linger);    // wait for 10ms
-
-        return sock;
+      zmq_socket_type sock(context(), ZMQ_PUSH);
+      sock.set(zmq::sockopt::rcvhwm, linger);
+      sock.set(zmq::sockopt::linger, linger);    // wait for 10ms
+      return sock;
     }
 };
 
