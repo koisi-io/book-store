@@ -29,6 +29,7 @@ class ZmqContext final {
         return ctx;
     }
   public:
+    // 工厂方法: 创建收发用的 sock 对象
     static zmq_socket_type recv_sock(int hwm = 1000, int linger = 10){
         zmq_socket_type sock(context(), ZMQ_PULL);
 
