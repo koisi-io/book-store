@@ -14,6 +14,7 @@
 USING_NAMESPACE(std);
 USING_NAMESPACE(cpp_study);
 
+// c++14 泛型 lambda
 static auto debug_print = [](auto& b) {
     using json_t = nlohmann::json;
     json_t j;
