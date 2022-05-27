@@ -48,7 +48,10 @@ class Summary final{
     }
 
     minmax_sales_type minmax_sales() const {
+        // 直到锁可用，才执行后续方法
+        // 出栈时，自动析构、解锁
         lock_guard_type guard(m_lock);
+
         // == return minmax_sales_type();
         if (m_sales.empty()) { return {};  }
 
