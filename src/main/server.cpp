@@ -46,7 +46,7 @@ int main() try {
         for(;;) {
             auto msg_ptr = std::make_shared<zmq_message_type>();
 
-            sock.recv(msg_ptr.get());
+            if (sock.recv(*(msg_ptr) ) ) { cout << "recv message" << endl ; }
             //cout << msg_ptr->size() << endl;
 
             ++count;
