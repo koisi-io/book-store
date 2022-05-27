@@ -37,6 +37,7 @@ auto send_sales = [](const auto& addr, const auto& buf){
     zmq::const_buffer zmq_buf((void*)buf.data(),buf.size());
     auto len = sock.send(zmq_buf);
     assert(len == buf.size());
+    if(len == 7){ cout << "yes" << (int)len.value() << endl;  }
     if((int)len.value() == buf.size()){ cout << "yes" << (int)len.value() << endl;  }
 };
 
